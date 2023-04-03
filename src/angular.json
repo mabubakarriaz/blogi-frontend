@@ -66,7 +66,10 @@
               "browserTarget": "blogi-frontend:build:development"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "development",
+          "options": {
+            "proxyConfig": "src/proxy.conf.js"
+          }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
@@ -89,13 +92,14 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "karmaConfig": "karma.conf.js"
           }
         }
       }
     }
   },
   "cli": {
-    "analytics": "67cc4aa4-7bd4-48f8-9970-a168c0d4b90d"
+    "analytics": "8067f998-5402-43b8-a341-e7e12bd3bc0b"
   }
 }

@@ -1,3 +1,5 @@
+import { environment } from 'src/environments/environment';
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +8,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  public forecasts?: WeatherForecast[];
+
+  constructor(http: HttpClient) {
+    http.get<WeatherForecast[]>(environment.apiUrl + '/weatherforecast').subscribe(result => {
+      this.forecasts = result;
+    }, error => console.error(error));
+  }
+
   title = 'blogi-frontend';
+}
+
+interface WeatherForecast {
+  date: string;
+  temperatureC: number;
+  temperatureF: number;
+  summary: string;
 }

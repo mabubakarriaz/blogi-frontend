@@ -1,0 +1,2 @@
+C:\TFS\github.com\mabubakarriaz\blogi-frontend\src\obj\Debug\blogi-frontend.esproj.SuggestedBindingRedirects.cache
+C:\TFS\github.com\mabubakarriaz\blogi-frontend\src\obj\Debug\blogi-frontend.esproj.CoreCompileInputs.cache
